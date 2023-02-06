@@ -43,6 +43,25 @@ nav{
 
 
 section.features{
+    color: #0084fd;
+}
+
+section.features p{
+    color: black;
+    line-height: 1.6em;
+    font-size: 16px;
+    padding: 0 20px 25px;
+}
+
+section.features i{
+    font-size: 4em;
+    margin: 15px 0;
+}
+
+section.features h3{
+    font-size: 1.3em;
+    margin: 5px 0 20px 0;
+
 }
 
 
@@ -76,6 +95,7 @@ section.features{
     width: calc(95%);
     min-height: 300px;
     background-color: #b5ddff;
+    text-align: center;
 }
 
 section.planning{
@@ -94,6 +114,10 @@ section.planning{
     width: calc(95%);
     background-color: rgb(255, 255, 255);
     min-height: 300px;
+}
+
+.planning-card img{
+    width: 100%;
 }
 
 .testimonials-inner{
@@ -149,4 +173,14 @@ section.about{
     width: 95%;
     min-height: 300px;
     border: 1px solid black;
+}
+
+section.getstarted{
+    background-color: #9792e4;
+    height: 500px;
+}
+
+footer{
+    background-color: #333333;
+    height: 300px;
 }
