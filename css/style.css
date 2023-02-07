@@ -111,6 +111,15 @@ section.features h3{
     width: 80%;
 }
 
+.features-card-text button{
+    color: white;
+    background-color: #0084fd;
+    font-size: 1.2em;
+    padding: 8px 70px;
+    border: none;
+    border-radius: 25px;
+}
+
 section.planning{
     background-color: #9792e4;
 }
@@ -287,7 +296,6 @@ section.about{
 
 .about-card{
     width: 95%;
-    border: 1px solid black;
     padding: 0 15px;
 }
 
@@ -314,9 +322,55 @@ section.about{
     margin-bottom: 30px;
 }
 
+.about-card button{
+    color: white;
+    background-color: #9792e4;
+    font-size: 12px;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 15px;
+}
+
 section.getstarted{
     background-color: #9792e4;
-    height: 500px;
+    text-align: center;
+    color: white;
+}
+
+.get-started-inner *{
+    margin-bottom: 25px;    
+}
+
+.get-started-inner{
+    padding: 50px 45px;
+}
+
+.get-started-inner h1{
+    color: #fdc15f;
+    font-size: 2.5em;
+}
+
+.get-started-inner h5{
+    color: rgb(190, 188, 238);
+}
+
+.get-started-inner button{
+    color: #9792e4;
+    background-color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.get-started-inner p{
+    font-size: 13px;
+    line-height: 1.7em;
+}
+
+.get-started-inner p{
+    font-size: 14px;
+    line-height: 1.7em;
 }
 
 footer{
