@@ -10,51 +10,88 @@ body{
     box-sizing: border-box;
 }
 
+.container-centered{
+    max-width: 1200px;
+    margin: auto;
+    border: 1px red solid;
+}
+
+/* inizio nav bar */
+
 nav{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: 80px;
     background-color: #0084fd;
 }
 
 .nav-inner{
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    background-color: #fdc15f;
 }
 
 .nav-left, .nav-right{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-}
-
-.nav-left{
-    margin-left: 15px;
+    min-width: 200px;
 }
 
 .nav-left img{
-    width: 70%;
+    width: 50%;
 }
 
+.nav-right{
+    font-size: 2em;
+    color: white;
+}
+/* fine nav bar */
 
+/* inizio prima sezione featured */
 section.features{
     color: #0084fd;
 }
 
-section.features p{
-    color: rgb(0, 0, 0);
-    line-height: 1.6em;
-    font-size: 16px;
-    padding: 0 20px 25px;
+section .features-inner{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 15px;
+}
+
+section .features-card{
+    width: calc(90%);
+    background-color: #b5ddff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 40px 10px;
+}
+.features-card:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 0;
 }
 
 .features-card:first-child p{
     padding: 0 0 25px;
+}
+
+section .features-card-text{
+    text-align: left;
+}
+
+section .features-card img{
+    width: 100%;
+    display: block;
 }
 
 section.features i{
@@ -65,56 +102,22 @@ section.features i{
 section.features h3{
     font-size: 1.3em;
     margin: 5px 0 20px 0;
-
-}
-
-/* desktop e tablet structure
-.features-inner{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 15px;
-}
-
-.features-card{
-    width: calc(100% / 3 - (15px / 3 * 2));
-    min-height: 300px;
-    background-color: #b5ddff;
-}
-
-.features-card:first-child{
-    width: calc(100% / 3 * 2 - (15px / 3 * 1));
-} */
-
-.features-inner{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 15px;
-}
-
-.features-card-text{
-    text-align: left;
-    padding: 20px 30px 15px;
-}
-
-.features-card{
-    width: calc(95%);
-    background-color: #b5ddff;
-    text-align: center;
-}
-
-.features-card img{
-    width: 80%;
 }
 
 .features-card-text button{
     color: white;
     background-color: #0084fd;
     font-size: 1.2em;
-    padding: 8px 70px;
+    padding: 9px 60px;
     border: none;
-    border-radius: 25px;
+    border-radius: 35px;
+}
+
+section.features p{
+    color: rgb(0, 0, 0);
+    line-height: 1.6em;
+    font-size: 16px;
+    padding: 0 20px 25px;
 }
 
 section.planning{
@@ -134,8 +137,19 @@ section.planning{
     color: white;
 }
 
+.planning-card-container.one{
+    border-radius: 20px;
+    text-align: center;
+}
+
 .planning-card.two{
     width: calc(95%);
+    /* background-color: white; */
+    border-radius: 20px;
+    text-align: center;
+}
+
+.planning-card-container.two{
     background-color: white;
     border-radius: 20px;
     text-align: center;
@@ -177,7 +191,7 @@ section.planning{
     flex-flow: column;
     align-items: center;
     gap: 20px;
-    padding: 20px 15px 50px;
+    padding: 10px 15px 50px;
 }
 
 .testimonials-card:first-child{
@@ -195,14 +209,14 @@ section.planning{
 }
 
 .testimonials-card{
-    width: calc(95%);
+    width: calc(90%);
     background-color: #9792e4;
     color: white;
     text-align: center;
     font-size: 14px;
     line-height: 1.7em;
-    border-radius: 30px;
-    padding: 25px 20px 25px;
+    border-radius: 16px;
+    padding: 25px 20px;
 }
 
 .testimonials-card h3{
@@ -218,8 +232,11 @@ section.planning{
     font-size: 1.2em;
 }
 
+.testimonials-img{
+    border-radius: 50%;
+}
 .testimonials-card img{
-    width: 80%;
+    width: 50%;
     border-radius: 50%;
 }
 
@@ -370,3 +387,101 @@ footer{
     background-color: #333333;
     height: 300px;
 }
+
+
+/* desktop e tablet structure */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    section .features-inner{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 15px;
+    }
+    
+    section .features-card{
+        /* width: calc(100% / 6 - (15px / 6 * 5)); */
+        width: calc(100% / 3 - (15px / 3 * 2));
+        background-color: #b5ddff;
+    }
+    
+    section .features-card:first-child{
+        width: calc(100% / 3 * 2 - (15px / 3 * 1));
+    } 
+
+    section .features-card-img{
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    section .features-card:nth-child(2){
+        background-color: #fdc15f;
+    } 
+    
+    section .features-card-img{
+        width: 50%;
+    }
+    
+    }
+    
+    @media screen and (min-width: 769px) {
+    
+        section .features-inner{
+            flex-flow: row wrap;
+            align-items: stretch;
+        }
+        
+        section .features-card{
+            width: calc(100% / 3 - (15px / 3 * 2));
+            background-color: #b5ddff;
+        }
+        
+        section .features-card:first-child{
+            flex-direction: row;
+            width: calc(100% / 3 * 2 - (15px / 3 * 1));
+        } 
+    
+        section .features-card-img{
+            display: flex;
+            align-items: flex-end;
+        }
+    
+        section .features-card img{
+            width: 100%;
+        }
+        
+        section .features-card:nth-child(2){
+            background-color: #fdc15f;
+        } 
+        
+        section .features-card-img, .features-card-text{
+            width: 50%;
+        }
+
+
+
+        section .planning-inner{
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .planning-card-container.one{
+            width: 70%;
+        }
+
+        .planning-card.one{
+            display: flex;
+            justify-content: center;
+        }
+
+        .planning-card.two{
+            display: flex;
+            align-items: end;
+        }
+
+        .planning-card-container.two{
+            width: 70%;
+            border-radius: 20px;
+            text-align: center;
+        }
+    }
